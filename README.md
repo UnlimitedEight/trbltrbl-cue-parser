@@ -1,5 +1,7 @@
 ## TREBLE TROUBLE CUE File Parser
 
+[![npm version](https://badge.fury.io/js/trbltrbl-cue-parser.svg)](https://badge.fury.io/js/trbltrbl-cue-parser)
+
 Script for parsing a CUE file and generating a tracklist for YouTube descriptions.
 
 ### Install
@@ -7,6 +9,7 @@ Script for parsing a CUE file and generating a tracklist for YouTube description
 Install it using your favourite package manager:
 
 `npm i -g trbltrbl-cue-parser`
+
 `yarn global add trbltrbl-cue-parser`
 
 ### Usage

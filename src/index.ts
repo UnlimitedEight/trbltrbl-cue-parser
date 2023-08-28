@@ -59,7 +59,9 @@ const main = async (file: string, options: { timestamps: boolean }) => {
     allUniqueStringTracks.forEach((item) => console.log(item));
   } catch (error) {
     if (error instanceof CustomError) {
-      return console.log('error: ' + error.message);
+      console.log('error: ' + error.message);
+
+      process.exit(1);
     }
 
     throw error;

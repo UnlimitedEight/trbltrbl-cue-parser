@@ -1,6 +1,6 @@
 {
   "name": "trbltrbl-cue-parser",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Script for parsing a CUE file and generating a tracklist for YouTube descriptions",
   "main": "dist/index.js",
   "bin": "dist/index.js",
@@ -8,6 +8,10 @@
   "author": "Nicu Frumusache",
   "license": "MIT",
   "private": false,
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "build": "tsc"
+  },
   "devDependencies": {
     "@types/node": "^20.5.3",
     "@typescript-eslint/eslint-plugin": "^6.4.1",
