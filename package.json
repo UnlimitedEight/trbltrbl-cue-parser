@@ -1,6 +1,6 @@
 {
   "name": "trbltrbl-cue-parser",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Script for parsing a CUE file and generating a tracklist for YouTube descriptions",
   "main": "dist/index.js",
   "bin": "dist/index.js",
