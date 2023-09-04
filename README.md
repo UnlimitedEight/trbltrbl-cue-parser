@@ -42,9 +42,9 @@ FILE "01 REC-2023-07-23.wav" WAVE
 
 Example output:
 ```
-[00:00:00] Rui Da Silva - Touch Me
-[00:01:52] Da Hool - Meet Her at the Loveparade
-[00:03:41] Tiesto - Love Comes Again
+[00:00] Rui Da Silva - Touch Me
+[01:52] Da Hool - Meet Her at the Loveparade
+[03:41] Tiesto - Love Comes Again
 ```
 
 Timestamps can be excluded if `--no-timestamps` is passed.

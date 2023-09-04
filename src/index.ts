@@ -44,19 +44,25 @@ const main = async (file: string, options: { timestamps: boolean }) => {
       time: item.indexes![0].time,
     }));
 
-    const allStringTracks = allObjTracks.map(({ artist, name, time }) => {
-      if (options.timestamps) {
-        return `[${tz(time.min)}:${tz(time.sec)}:${tz(
-          time.frame,
-        )}] ${artist} - ${name}`;
-      }
+    const allStringTracks: string[] = [];
 
-      return `${artist} - ${name}`;
+    allObjTracks.forEach(({ artist, name, time }) => {
+      if (
+        !allStringTracks.find((item) => item.includes(`${artist} - ${name}`))
+      ) {
+        if (options.timestamps) {
+          return allStringTracks.push(
+            `[${time.min > 0 ? tz(time.min) + ':' : ''}${tz(time.sec)}:${tz(
+              time.frame,
+            )}] ${artist} - ${name}`,
+          );
+        }
+
+        return allStringTracks.push(`${artist} - ${name}`);
+      }
     });
 
-    const allUniqueStringTracks = [...new Set(allStringTracks)];
-
-    allUniqueStringTracks.forEach((item) => console.log(item));
+    allStringTracks.forEach((item) => console.log(item));
   } catch (error) {
     if (error instanceof CustomError) {
       console.log('error: ' + error.message);
